@@ -27,6 +27,25 @@ class GroupHelper:
         wd.find_element_by_name("submit").click()
         self.return_to_groups()
 
+    def edit(self, new_name="Hello world"):
+        wd = self.app.wd
+        self.open_groups_page()
+        if not wd.find_element_by_name("selected[]").is_selected():
+            wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_name("edit").click()
+        wd.find_element_by_name("group_name").click()
+        wd.find_element_by_name("group_name").clear()
+        wd.find_element_by_name("group_name").send_keys(new_name)
+        wd.find_element_by_name("update").click()
+        self.return_to_groups()
+
+    def delete(self):
+        wd = self.app.wd
+        self.open_groups_page()
+        if not wd.find_element_by_name("selected[]").is_selected():
+            wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_name("delete").click()
+        self.return_to_groups()
 
     def return_to_groups(self):
         # return to groups page
