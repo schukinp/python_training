@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
-from model.edit_group import EditGroup
-
+from model.group import Group
 def test_edit_group_name(app):
-    app.group.edit(EditGroup(new_name="Hello world"))
+    if app.group.count() == 0:
+        app.group.create(Group(name="Test"))
+    app.group.edit(Group(name="New name"))
 
+#def test_edit_group_header(app):
+   #app.group.edit(Group(header="New header"))
