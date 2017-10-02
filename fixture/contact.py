@@ -1,3 +1,5 @@
+from model.contact import Contact
+
 class ContactHelper:
 
     def __init__(self, app):
@@ -9,6 +11,11 @@ class ContactHelper:
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(contact)
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        self.return_home()
+
+    def return_home(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
 
     def edit(self, new_contact_data):
         wd = self.app.wd
@@ -16,6 +23,7 @@ class ContactHelper:
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
         self.fill_contact_form(new_contact_data)
         wd.find_element_by_name("update").click()
+        self.return_home()
 
     def fill_contact_form(self, contact):
         wd = self.app.wd
@@ -42,9 +50,21 @@ class ContactHelper:
         self.select_contact()
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
-        wd.find_element_by_link_text("home")
+        self.return_home()
 
     def count (self):
         wd = self.app.wd
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        contacts = []
+        for element in wd.find_elements_by_css_selector("tr[name=entry]"):
+            cells = element.find_elements_by_tag_name("td")
+            id = cells[0].find_element_by_name("selected[]").get_attribute("value")
+            lastname = cells[1]
+            firstname = cells[2]
+            contacts.append(Contact(lastname=lastname, firstname=firstname, id=id))
+        return contacts
+
 
