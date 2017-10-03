@@ -20,12 +20,12 @@ class ContactHelper:
 
     def edit_first_contact(self):
         wd = self.app.wd
-        self.edit_contact_by_index(0)
+        self.select_contact_by_index(0)
 
     def edit_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.select_contact_by_index(index)
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        wd.find_elements_by_css_selector('img[alt="Edit"]')[index].click()
         self.fill_contact_form(new_contact_data)
         wd.find_element_by_name("update").click()
         self.return_home()
