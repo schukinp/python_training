@@ -18,9 +18,13 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
 
-    def edit(self, new_contact_data):
+    def edit_first_contact(self):
         wd = self.app.wd
-        self.select_contact()
+        self.edit_contact_by_index(0)
+
+    def edit_contact_by_index(self, index, new_contact_data):
+        wd = self.app.wd
+        self.select_contact_by_index(index)
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
         self.fill_contact_form(new_contact_data)
         wd.find_element_by_name("update").click()
@@ -42,14 +46,22 @@ class ContactHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-    def select_contact(self):
+    def select_first_contact(self):
         wd = self.app.wd
         if not wd.find_element_by_name("selected[]").is_selected():
             wd.find_element_by_name("selected[]").click()
 
-    def delete(self):
+    def delete_first_contact(self):
         wd = self.app.wd
-        self.select_contact()
+        self.delete_contact_by_index(0)
+
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+    def delete_contact_by_index(self, index):
+        wd = self.app.wd
+        self.select_contact_by_index(index)
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
         self.return_home()
