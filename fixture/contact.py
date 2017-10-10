@@ -44,7 +44,7 @@ class ContactHelper:
         self.change_contact_value("firstname", contact.firstname)
         self.change_contact_value("lastname", contact.lastname)
         self.change_contact_value("nickname", contact.nickname)
-        self.change_contact_value("mobile", contact.mobile)
+        self.change_contact_value("mobile", contact.mobilephone)
         self.change_contact_value("email", contact.email)
 
 

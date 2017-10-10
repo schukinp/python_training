@@ -15,6 +15,7 @@ class SessionHelper:
         wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
+
     def logout(self):
         # logout
         wd = self.app.wd
@@ -31,7 +32,7 @@ class SessionHelper:
 
     def is_logged_in_as(self, username):
         wd = self.app.wd
-        return self.get_logged_used() == username
+        return self.get_logged_user() == username
 
     def get_logged_user(self):
         wd = self.app.wd
