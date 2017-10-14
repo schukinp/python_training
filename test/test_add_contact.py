@@ -13,7 +13,7 @@ def random_string(prefix, maxlen):
 
 testdata = [Contact(firstname="", lastname="", nickname="", mobilephone="", email="")] + [
             Contact(firstname=random_string("firstname",10), lastname=random_string("lastname",10), nickname=random_string("nickname",10), mobilephone=random_string("mobilephone",10), email=random_string("email", 10))
-for i in range(3)]
+            for i in range(3)]
 
 @pytest.mark.parametrize("contact", testdata, ids=[str(x) for x in testdata])
 def test_add_contact(app, contact):
