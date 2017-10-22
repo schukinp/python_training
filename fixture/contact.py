@@ -153,6 +153,31 @@ class ContactHelper:
         return Contact(homephone=homephone, mobilephone=mobilephone,
                        workphone=workphone, fax=secondaryphone)
 
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        self.open_contacts_homepage()
+        self.select_contact_by_id(id)
+        wd.find_element_by_css_selector("input[value='Delete']").click()
+        wd.switch_to_alert().accept()
+        self.open_contacts_homepage()
+        self.contact_cache = None
+
+
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+
+    def edit_contact_by_id(self, id, new_contact_data):
+        wd = self.app.wd
+        self.open_contacts_homepage()
+        wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
+        self.fill_contact_form(new_contact_data)
+        wd.find_element_by_name("update").click()
+        self.open_contacts_homepage()
+        self.contact_cache = None
+
+
+
 
 
 
