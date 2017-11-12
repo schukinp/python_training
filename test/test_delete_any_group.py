@@ -9,7 +9,7 @@ def test_delete_any_group(app, db, check_ui):
         app.group.create(Group(name="test"))
     old_groups = db.get_group_list_from_db()
     group = random.choice(old_groups)
-    app.group.delete_group_by_id(group.id, group)
+    app.group.delete_group_by_id(group.id)
     new_groups = db.get_group_list_from_db()
     assert len(old_groups) - 1 == len(new_groups)
     old_groups.remove(group)
