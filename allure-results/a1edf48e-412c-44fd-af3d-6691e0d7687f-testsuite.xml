@@ -1,0 +1,78 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1510504769975" stop="1510504778295">
+  <name>test.test_add_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1510504769975" status="passed" stop="1510504774918">
+      <name>test_add_group[None:;;]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11060-MainThread"/>
+        <label name="host" value="Junior"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1510504774919" status="passed" stop="1510504775630">
+      <name>test_add_group[None:nameGQbmU;headerPvg0oovIErdKpE0o6;footerChpR]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11060-MainThread"/>
+        <label name="host" value="Junior"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1510504775631" status="passed" stop="1510504776286">
+      <name>test_add_group[None:nameTl;headerv;footerpes]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11060-MainThread"/>
+        <label name="host" value="Junior"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1510504776287" status="passed" stop="1510504776970">
+      <name>test_add_group[None:name;headerFdajmRJ q lbuZps4hp;footer6qPPiUKaC]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11060-MainThread"/>
+        <label name="host" value="Junior"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1510504776971" status="passed" stop="1510504777649">
+      <name>test_add_group[None:nameB;headeruwAp7Nsc63W ijG;footeruuacxmAX85H1mFG]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11060-MainThread"/>
+        <label name="host" value="Junior"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1510504777650" status="passed" stop="1510504778295">
+      <name>test_add_group[None:nameLfbB;headerXf;footerdWiJwkfIEtlCt]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11060-MainThread"/>
+        <label name="host" value="Junior"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

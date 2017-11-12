@@ -1,0 +1,50 @@
+{
+  "uid" : "b3205dd20c445d89",
+  "name" : "test_add_group[None:nameLfbB;headerXf;footerdWiJwkfIEtlCt]",
+  "title" : "Test add group [None:nameLfbB;headerXf;footerdWiJwkfIEtlCt]",
+  "time" : {
+    "start" : 1510504777650,
+    "stop" : 1510504778295,
+    "duration" : 645
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "3df3f73446a83509",
+    "name" : "test.test_add_group",
+    "title" : "Test add group"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "11060-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Junior"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.test_add_group"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}
