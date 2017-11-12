@@ -7,7 +7,7 @@ import random
 db = ORMfixture(host='127.0.0.1', name='addressbook', user='root', password='')
 
 
-def test_delete_contact_to_group(app):
+def test_delete_contact_from_group(app):
         if len(db.get_contact_list()) == 0:
             app.contact.create(Contact(firstname="Russel", lastname="Westbrook"))
         if len(db.get_group_list()) == 0:

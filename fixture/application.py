@@ -7,8 +7,7 @@ class Application:
 
     def __init__(self, browser, base_url):
         if browser == "firefox":
-            self.wd = webdriver.Firefox(capabilities={"marionette": False},
-                            firefox_binary="C:/Program Files/Mozilla Firefox/firefox.exe")
+            self.wd = webdriver.Firefox(capabilities={"marionette": False}, firefox_binary="C:/Program Files/Mozilla Firefox/firefox.exe")
         elif browser == "chrome":
             self.wd = webdriver.Chrome()
         elif browser == "ie":

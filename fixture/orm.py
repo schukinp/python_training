@@ -33,12 +33,12 @@ class ORMfixture:
         self.db.generate_mapping()
         sql_debug(True)
 
-    def convert_groups_to_model(selfself, groups):
+    def convert_groups_to_model(self, groups):
         def convert(group):
             return Group(id=str(group.id), name=group.name, header=group.header, footer=group.footer)
         return list(map(convert, groups))
 
-    def convert_contacts_to_model(selfself, contacts):
+    def convert_contacts_to_model(self, contacts):
         def convert(contact):
             return Contact(id=str(contact.id), firstname=contact.firstname, lastname=contact.lastname)
         return list(map(convert, contacts))

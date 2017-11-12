@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from fixture.orm import ORMfixture
 from model.group import Group
 from model.contact import Contact
@@ -21,6 +23,7 @@ def test_add_contact_to_group(app):
         new_contacts_in_group = db.get_contacts_in_group(Group(id='%s' % group_id))
         assert len(old_contacts_not_in_group) - 1 == len(new_contacts_not_in_group)
         assert len(old_contacts_in_group) + 1 == len(new_contacts_in_group)
+
 
 
         

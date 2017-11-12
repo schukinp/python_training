@@ -1,7 +1,7 @@
 from model.contact import Contact
 import re
 from selenium.webdriver.support.ui import Select
-import time
+
 
 class ContactHelper:
 
